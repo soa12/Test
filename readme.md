@@ -7,24 +7,32 @@
  
 ### /register
 #### Пример запроса
-
-#### Ответ
     {
-	"response":  [{
-	"user_id":  66748,  
-	"friend_status":  0,  
-	"sign":  "f9d2aa0727bc44defecad76e24844468"
-	}]
-	}
-#### Коды ошибок
+    	"name":"name",
+    	"login":"login@domain.com",
+    	"password":"passwd12"
+    }
+#### Пример ответа
+    {
+    	"status":"200",
+	"response":"login@domain.com"
+    }
 
+#### Коды ошибок
+400 - Пользователь с таким логином уже зарегистрирован
 ### /login
 #### Пример запроса
-
+    {
+    	"login":"login@domain.com",
+    	"password":"passwd12"
+    }
 #### Ответ
-
+    {
+    	"status":"200",
+	"response":"login@domain.com"
+    }
 #### Коды ошибок
-
+400 - Пользователь не найден. Проверьте правильность введенных данных.
 # Работа с документом
 ||Метод |Описание  |
 |--|--|--|
@@ -33,9 +41,17 @@
 
 ### /upload
 #### Пример запроса
-
+    {
+    	"hash":"46ca5f6e0b40078d02ec5efd36df31ddb34586a37481a12f568c126068113ff5",
+    	"date":"2018-01-01 01:00:00",
+    	"name":"document"
+    }
 #### Ответ
-
+    {
+    	"status": "success",
+    	"bitcoinAdrr": "d0af4979b9797ef646fd5b75c3224649",
+    	"ethereumAddr": "d0af4979b9797ef646fd5b75c3224649"
+    }
 #### Коды ошибок
 
 ### /check
