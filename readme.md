@@ -15,7 +15,7 @@
 #### Пример ответа
     {
     	"status":"200",
-	"response":"login@domain.com"
+    	"response":"login@domain.com"
     }
 
 #### Коды ошибок
@@ -29,7 +29,7 @@
 #### Ответ
     {
     	"status":"200",
-	"response":"login@domain.com"
+    	"response":"login@domain.com"
     }
 #### Коды ошибок
 400 - Пользователь не найден. Проверьте правильность введенных данных.
